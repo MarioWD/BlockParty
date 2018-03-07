@@ -1,0 +1,7 @@
+.ftpconfig
+.ftpignore
+.ftpquota
+id_rsa
+.DS_Store
+.git
+/client-imgs
