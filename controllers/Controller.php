@@ -6,6 +6,7 @@ class Controller
 {
     protected $model, $page, $view, $get, $post, $viewable, $proccessable;
     protected $calculatetable, $hasModel, $dBase;
+    protected $auth;
 
     function __construct()
     {
@@ -40,15 +41,10 @@ class Controller
       $this->view = $this->page->getShortName();
       $this->viewable = file_exists(__VIEW__.$this->view.".php");
       $this->proccessable = file_exists(__PROCESS__.$this->view.".php");
-      // $this->calculatetable = file_exists(__CALCULATE__.$this->view.".php");
       $this->dBase = Db::getInstance()->rawPDO();
     }
     private function loadView()
     {
-      // if($this->calculatetable)
-      // {
-      //   require_once(__CALCULATE__.$this->view.".php");
-      // }
       require_once(HEAD);
       require_once(HEADER);
       $this->printMsgs();
@@ -88,10 +84,6 @@ class Controller
     }
     protected function loadPartial($view = "")
     {
-      // if(file_exists(__CALCULATE__.$view.".php"))
-      // {
-      //   require_once(__CALCULATE__.$view.".php");
-      // }
       if(file_exists(__VIEW__.$view.".php"))
       {
         require_once(__VIEW__.$view.".php");
