@@ -44,12 +44,13 @@ body{
 .navi-row a{
   text-align: center;
   color: #fff;
-  font-size: 1.2em;
-  font-weight: bold;
   min-width: 20px;
   padding: 0 10px;
   line-height: inherit;
   display: inline-block;
+}
+.navi-row a:hover{
+  background-color: #3B5C6A;
 }
 .navi-row .col:first-child{
   border-left-width: 0;
@@ -66,6 +67,47 @@ body{
 }
 .block-title{
   border-bottom: 1px solid gainsboro;
+}
+.form-group {
+  display: block;
+  margin: 10px 0;
+  line-height: 20px;
+}
+.form-group input[type=password],
+.form-group input[type=text],
+.form-group input[type=email],
+.form-group textarea {
+	font-size: 1em;
+	background-color: #f9f0af;
+	border: 1px solid gainsboro;
+	width: 100%;
+	line-height: 20px;
+	min-height: 20px;
+	text-indent: 10px;
+}
+.six-register { 
+	border: 2px solid #000;
+	border-radius: 5px;
+	padding: 20px;
+}
+.btn-register:hover {
+    color: #FFFFFF;
+    border-color: #6a353d;
+    background: -webkit-linear-gradient(#6a353d,#b76e79);
+    background: -o-linear-gradient(#6a353d,#b76e79);
+    background: -moz-linear-gradient(#6a353d,#b76e79);
+    background: linear-gradient(#6a353d,#b76e79);
+}
+.btn-register {
+    color: #FFFFFF;
+    border-color: #b76e79;
+    background: -webkit-linear-gradient(#b76e79,#6a353d);
+    background: -o-linear-gradient(#b76e79,#6a353d);
+    background: -moz-linear-gradient(#b76e79,#6a353d);
+    background: linear-gradient(#b76e79,#6a353d);
+    line-height: 30px;
+    min-height: 30px;
+
 }
 @media screen and (min-width: 1200px){
 }

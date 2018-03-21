@@ -1,5 +1,5 @@
 <?php
-namespace classes;
+namespace models;
 use \classes\Config as Config;
 Class Auth {
 	private $_role = 1;
@@ -8,20 +8,18 @@ Class Auth {
 	
 	function __construct()
 	{
-		$testData = ["first_name"=>"mario",
-		"last_name"=>"flores",
-		"pass"=>"pasdragons93",
-		"email" => "mariomail.com"];
-		dbg($this->registerUser($testData));
+	}
+	function getErrors()
+	{
+		return $this->_errors;
 	}
 	function registerUser($data)
 	{
 		if($this->_ready_to_register)
 		{
-				
 			$db = Db::getInstance()->rawPDO();
 			$userId = time();
-			$role = $this->defaultRole;
+			$role = $this->_role;
 			$first_name = html_entity_decode($data["first_name"]);
 			$last_name = html_entity_decode($data["last_name"]);
 			$hash = $this->_hashPassword($data["pass"]);
@@ -46,10 +44,23 @@ Class Auth {
 		{
 			$this->_errors[] = "No email provided";
 		}
-		elseif (!$this->_validateEmail($data["email"]))
+		if (!$this->_validateEmail($data["email"]))
 		{
 			$this->_errors[] = "email is not valid";
 		}
+		if (!$data["password"])
+		{
+			$this->_errors[] = "No password given";
+		}
+		if (strlen($data["password"]) <= 6)
+		{
+			$this->_errors[] = "Password too short, it's only ".strlen($data["password"])." characters long";
+		}
+		if ($data["password"] !== $data["re-password"])
+		{
+			$this->_errors[] = "Password entries do not match";
+		}
+
 
 		if(empty($this->_errors))
 		{
