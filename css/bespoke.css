@@ -167,13 +167,13 @@ a.btn:hover{
 	text-decoration: none;
 }
 .btn.btn-small{
-  width: 180px
+  min-width: 180px
 }
 .btn.btn-med{
-  width: 280px;
+  min-width: 280px;
 }
 .btn.btn-big{
-  width: 380px;
+  min-width: 320px;
 }
 .btn.btn-fluid{
 	padding: 0 30px;

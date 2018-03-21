@@ -1,5 +1,4 @@
-<header>
-  <div class="container">
+<header class="container">
     <?php
     if($this->showBanner && !empty($this->bannerImgs))
     { ?>
@@ -15,11 +14,8 @@
     } ?>
     <div class="row navi-row bg-tri-4 sticky-navi">
       <div class="col dsk-12 tbt-12 mob-12">
-        <a class="text-no-decal <?=$this->view == "Home"?"bg-tri-5":""?>" href="/home/">Home</a>
-        <a class="text-no-decal <?=$this->view == "Blog"?"bg-tri-5":""?>" href="/blog/">Blog</a>
-        <a class="text-no-decal <?=$this->view == "Blog"?"bg-tri-5":""?>" href="/profiles/">Profiles</a>
+        <a class="text-no-decal <?=$this->view == "Home"?"bg-tri-5":""?>" href="/home/">Home</a><a class="text-no-decal <?=$this->view == "Blog"?"bg-tri-5":""?>" href="/blog/">Blog</a><a class="text-no-decal <?=$this->view == "Profiles"?"bg-tri-5":""?>" href="/profiles/">Profiles</a><a class="text-no-decal <?=$this->view == "Register"?"bg-tri-5":""?>" href="/register/">Register</a>
       </div>
     </div>
-  </div>
 </header>
-<main>
+<main class="container">
