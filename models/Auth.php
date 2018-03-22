@@ -5,9 +5,11 @@ Class Auth {
 	private $_role = 1;
 	private $_errors = [];
 	private $_ready_to_Register = 0;
+	private $_db;
 	
 	function __construct()
 	{
+		$this->_db = \classes\Db::getInstance()->rawPDO();
 	}
 	function getErrors()
 	{
@@ -15,20 +17,22 @@ Class Auth {
 	}
 	function registerUser($data)
 	{
-		if($this->_ready_to_register)
+		$result = false;
+		if($this->ready_to_register)
 		{
-			$db = Db::getInstance()->rawPDO();
 			$userId = time();
 			$role = $this->_role;
 			$first_name = html_entity_decode($data["first_name"]);
 			$last_name = html_entity_decode($data["last_name"]);
 			$hash = $this->_hashPassword($data["pass"]);
 			$email = $this->_validateEmail($data["email"]);
-			$regiSql = "INSERT INTO Users
-			VALUES ($userId, $role, $first_name, $last_name, $email, $hash)";
+
+			$regiSql = "INSERT INTO users VALUES ($userId, $role, '$first_name', '$last_name', '$email', '$hash')";
+			$regiQuery = $this->_db->prepare($regiSql);
+			$result = $regiQuery->execute();
 		}
 
-		return $email;
+		return $result;
 	}
 	function validateRegistration($data)
 	{
@@ -47,6 +51,10 @@ Class Auth {
 		if (!$this->_validateEmail($data["email"]))
 		{
 			$this->_errors[] = "email is not valid";
+		}	
+		if($this->_emailExists($data["email"]))
+		{
+			$this->_errors[] = "email already exists in our records";
 		}
 		if (!$data["password"])
 		{
@@ -64,14 +72,22 @@ Class Auth {
 
 		if(empty($this->_errors))
 		{
-			$this->_ready_to_register = 1;
+			$this->ready_to_register = 1;
 		}
 		else
 		{
-			$this->_ready_to_register = 0;
+			$this->ready_to_register = 0;
 		}
+		return $this->ready_to_register;
+	}
+	private function _emailExists($email)
+	{
+		$sql =  "select email from users where email = '$email';";
+		$query = $this->_db->prepare($sql);
+		$result = $query->execute();
+		$user_email = $query->fetch(\PDO::FETCH_OBJ);
+		return $user_email->email == $email;
 		
-		return $this->ready_to_regiter;
 	}
 	private function _generateTableSql()
 	{

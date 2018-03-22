@@ -18,7 +18,7 @@ class Db
         $db_data = Config::get('db_data');
         try
         {
-            $this->_pdo = new PDO("mysql:host={$db_data['dbhost']};dbname={$db_data['dbname']}", $db_data['user'], $db_data['pass']);
+            $this->_pdo = new \PDO("mysql:host={$db_data['dbhost']};dbname={$db_data['dbname']}", $db_data['user'], $db_data['pass']);
             $this->_pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         }
         catch (PDOException $e)
