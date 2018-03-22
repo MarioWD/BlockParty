@@ -1,15 +1,20 @@
 <?php
-namespace models;
+namespace classes;
 use \classes\Config as Config;
-Class Auth {
+Class Auth 
+{
 	private $_role = 1;
 	private $_errors = [];
 	private $_ready_to_Register = 0;
 	private $_db;
-	
+
 	function __construct()
 	{
 		$this->_db = \classes\Db::getInstance()->rawPDO();
+	}
+	function logout()
+	{
+		unset($_SESSION["u_id"]);
 	}
 	function getErrors()
 	{
@@ -30,6 +35,10 @@ Class Auth {
 			$regiSql = "INSERT INTO users VALUES ($userId, $role, '$first_name', '$last_name', '$email', '$hash')";
 			$regiQuery = $this->_db->prepare($regiSql);
 			$result = $regiQuery->execute();
+			if($result)
+			{
+				$_SESSION["u_id"] = $userId;
+			}
 		}
 
 		return $result;
@@ -80,6 +89,23 @@ Class Auth {
 		}
 		return $this->ready_to_register;
 	}
+	function authById($id=false)
+	{
+		$result = false;
+		if($id)
+		{
+			$sql = "select first_name, last_name, role, email from users where id = $id;";
+			$query = $this->_db->prepare($sql);
+			$result = $query->execute();
+		}
+
+		if($result)
+		{
+			return $query->fetch(\PDO::FETCH_OBJ);	
+		}
+		return $result;
+	}
+
 	private function _emailExists($email)
 	{
 		$sql =  "select email from users where email = '$email';";
@@ -87,7 +113,7 @@ Class Auth {
 		$result = $query->execute();
 		$user_email = $query->fetch(\PDO::FETCH_OBJ);
 		return $user_email->email == $email;
-		
+
 	}
 	private function _generateTableSql()
 	{
