@@ -105,6 +105,28 @@ Class Auth
 		}
 		return $result;
 	}
+	function login($email, $pass)
+	{
+		$sql = "select * from users where email = '$email';";
+		$query = $this->_db->prepare($sql);
+		$result = $query->execute();
+		$user = $query->fetch(\PDO::FETCH_OBJ);
+		if(!$result)
+		{
+			$this->_errors[] = "Incorrect Email used";
+			return false;
+		}
+		elseif($this->_verifyPassword($pass, $user->hash))
+		{
+			$_SESSION["u_id"] = $user->id;
+			return true;
+		}
+		else
+		{
+			$this->_errors[] = "Wrong password";
+			return false;
+		}
+	}
 
 	private function _emailExists($email)
 	{

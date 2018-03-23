@@ -8,6 +8,7 @@ Class Logout extends Controller
 	{
 		parent::__construct();
 		$this->_auth->logout();
+		$this->setMsg("Safely logged out of account", "success");
 		header("location: /home/");
 	}
 }
