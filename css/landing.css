@@ -1,0 +1,159 @@
+/* START STRAP OVERRIDE */
+.navbar {
+  background-color: transparent;
+  opacity: 1;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+	background: transparent;
+}
+
+/* PAGE STYLES */
+body {
+	background: #E5FFFF;
+}
+
+.page {
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	position: absolute;
+}
+
+.nav {
+	padding: 0;
+	text-align: center;
+}
+
+.nav .banner {
+	padding: 0;
+}
+.nav .container {
+
+}
+.nav .col-xs-3 {
+	padding: 0 2px;
+}
+
+.nav a > p {
+	padding: 10px 0;
+}
+
+.content {
+	height: 100vh;
+	width: 100vw;
+	overflow-x: hidden;
+	overflow-y: auto;
+	text-align: center;
+	padding: 0;
+	padding-right: 17px;
+}
+.content > .col-xs-12 {
+	padding: 0;
+}
+
+.poster {
+	width: 100vw;
+	padding: 0;
+}
+.poster img {
+  width: 100%;
+}
+/* blue #E5FFFF */
+/* yellow #FFF3A3 */
+.festival {
+	padding: 0;
+}
+.festival img {
+  width: 100%;
+}
+
+.sponsors {
+	width: 100vw;
+	text-align: left;
+	padding: 20px 10px;
+	background: #E5FFFF;
+}
+.sponsors .container {
+	background: #FFF3A3;
+}
+.sponsors img {
+  width: 100%;
+}
+.sponsors .monster {
+  margin-top: 1vh;
+}
+
+.sponsors .container, .artists .container, .festival .container{
+	padding: 10vh 0;
+}
+.artists {
+	background: #FFF3A3;
+}
+.artist-list {
+  margin-top: 5vh;
+}
+.artist-list h3 {
+  margin: 4px;
+  letter-spacing: 3px;
+  text-shadow: 1px 0 #111;
+  -webkit-font-smoothing: antialiased;
+}
+.artist-list h3 a {
+  color: inherit;
+  text-shadow: inherit;
+}
+.artist-list h3:last-of-type {
+  font-size: 12px;
+}
+.artists .images {
+  margin-top: -4vh;
+}
+.artists .images > .col-xs-3 {
+  padding: 0;
+  margin: 2px 0;
+}
+.artists .images > .col-xs-3:first-of-type {
+  margin-top: 20px;
+}
+.artists .images > .col-xs-3:nth-of-type(2) {
+  margin-top: 10px;
+}
+.artists .images > .col-xs-3:nth-of-type(3) {
+  margin-top: 15px;
+}
+.artists .images > .col-xs-3:last-of-type {
+  margin-top: -5px;
+}
+.artists .images img {
+	display: inline-block;
+  width: 98%;
+  margin: 2px;
+}
+
+.festival {
+  background: #E5FFFF;
+}
+
+.festival > img {
+  width: 100%;
+  position: absolute;
+}
+.festival p, .festival h3 {
+  color: #111;
+}
+
+.tickets h2 {
+  color: #111;
+}
+.tickets h3 {
+  letter-spacing: normal;
+}
+.tickets a {
+  width: 100%;
+}
+.tickets .btn {
+  background: #FD5A4B;
+  color: #fff;
+  /*color: #E5FFFF;*/
+}
