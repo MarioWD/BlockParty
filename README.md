@@ -1,2 +1,1 @@
-# BespokeMVC
-Person MVC Project
+# BlockParty
