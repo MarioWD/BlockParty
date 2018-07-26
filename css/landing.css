@@ -14,8 +14,6 @@ body {
 }
 
 .page {
-	height: 100vh;
-	width: 100vw;
 	overflow: hidden;
 	position: absolute;
 }
@@ -40,8 +38,6 @@ body {
 }
 
 .content {
-	height: 100vh;
-	width: 100vw;
 	overflow-x: hidden;
 	overflow-y: auto;
 	text-align: center;
@@ -52,10 +48,6 @@ body {
 	padding: 0;
 }
 
-.poster {
-	width: 100vw;
-	padding: 0;
-}
 .poster img {
   width: 100%;
 }
@@ -69,7 +61,6 @@ body {
 }
 
 .sponsors {
-	width: 100vw;
 	text-align: left;
 	padding: 20px 10px;
 	background: #E5FFFF;
@@ -84,8 +75,14 @@ body {
   margin-top: 1vh;
 }
 
-.sponsors .container, .artists .container, .festival .container{
+.sponsors>.row, .artists>.row, .festival>.row{
 	padding: 10vh 0;
+}
+.artists>.row,
+.sponsors>.row,
+.festival>.row {
+    max-width: 970px;
+    margin: auto;
 }
 .artists {
 	background: #FFF3A3;
@@ -156,4 +153,6 @@ body {
   background: #FD5A4B;
   color: #fff;
   /*color: #E5FFFF;*/
+  vertical-align: middle;
+  line-height: 15px;
 }
