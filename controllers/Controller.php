@@ -12,7 +12,6 @@ class Controller
 	function __construct()
 	{
 		$this->_sanitizeInputs($_GET, $_POST);
-		$this->authorized_to_view = Config::get("view_auths");
 		$this->setup();
 	}
 	private function _sanitizeInputs($get = array(), $post = null)
@@ -43,8 +42,6 @@ class Controller
 		$this->view = $this->page->getShortName();
 		$this->viewable = file_exists(__VIEW__.$this->view.".php");
 		$this->proccessable = file_exists(__PROCESS__.$this->view.".php");
-
-		$this->_auth = new \classes\Auth();
 	}
 	private function loadView()
 	{
