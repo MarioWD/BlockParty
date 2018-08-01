@@ -6,7 +6,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#myPage"><img src="images/BlockPartyCrop2.png" alt="Block Party Image" /></a>
+      <a class="navbar-brand" href="#myPage"><img src="./images/vpftitle.png" alt="Block Party Image" /></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
@@ -19,8 +19,10 @@
   </div>
 </nav>
 
-<div class="text-center poster">
-	<img src="images/canadadayposter_cropped2.gif" />
+<div class="text-center poster" id='poster'>
+    <video style='' width='100%' id='teaser-banner' poster='images/vpftitlebg.gif'>
+        <source src='./videos/vpfteaser.mp4' type='video/mp4'></source>
+    </video>
 </div>
 <div id="festival" class="festival">
     <div class="row">
@@ -65,11 +67,8 @@
             <h3> and more... </h3>
         </div>
         <?php reset($this->a_list); ?>
-        <?php $v = current($this->a_list); ?>
-        <?php next($this->a_list); ?>
         <div class="col-md-8 col-sm-6 hidden-xs images">
             <div class="col-xs-3"><!--
-                --><a href="<?=$v['l']?>" target="_blank"><img src="<?=$v['i']?>" alt="<?=$v['a']?>"/></a><!--
                 --><?php while (list($k,$v) = each($this->a_list)) { ?><!--
                 --><?php if ($i && $i%3==0) { ?></div><div class="col-xs-3"><?php } ?><!--
                 --><a href="<?=$v['l']?>" target="_blank"><img src="<?=$v['i']?>" alt="<?=$v['a']?>"/></a><!--
@@ -82,9 +81,14 @@
 <div class='sponsors' id="sponsors" >
     <div class="row text-center">
         <div class="clearfix">
-            <div class="col-xs-4 monster"><img src="../images/MONSTER_FULL.png" alt="Monster Energy" /></div>
-            <div class="col-xs-5"><img src="../images/GeorgiaStraight.jpg" alt="Georgia Straight" /></div>
-            <div class="col-xs-3"><img src="../images/do604.png" alt="Do 604" /></div>
+            <div class='col-xs-3'>
+            <?php foreach ($this->sponsors as $k=>$v) { ?>
+            <?php if ($k && $k%$this->spo_cnt==0) { ?></div><div class='col-xs-3'><?php } ?>
+            <img src='sponsors/<?=$v?>'/>
+            <br>
+            <br>
+            <?php } ?>
+            </div>
         </div>
     </div>
 </div>

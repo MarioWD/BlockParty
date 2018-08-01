@@ -8,8 +8,8 @@
 <meta http-equiv='expires' content='Mon, 01 Jan 2000 00:00:00 GMT' />
 <meta name='description' content="<?php echo Config::get("siteDesc"); ?>" />
 <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-<link rel="bookmark icon" href="/favicon.ico" />
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+<link rel="bookmark icon" href="images/favicon.ico" />
 <meta name="Identifier-URL" content="<?php echo Config::get("siteName"); ?>"  />
 <meta name="copyright" content="<?php echo Config::get("siteNameStyled"); ?> | All rights reserved." />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />

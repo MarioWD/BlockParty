@@ -23,7 +23,7 @@ $GLOBALS['conf'] = [
     'siteName' => "www.vanpopfest.com",
     'siteNameStyled' => "VanPopFest",
     'metaKeywords' => [],
-    'title' => "Vancouver Pop Festival",
+    'title' => "VAN POP FEST",
 ];
 
 require_once 'functions/debug.php';

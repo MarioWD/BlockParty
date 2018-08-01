@@ -5,9 +5,15 @@ class Home extends Controller
   function __construct()
   {
     parent::__construct();
+    $this->sponsors = scandir('./sponsors');
+    unset($this->sponsors[array_search('.',$this->sponsors)]);
+    unset($this->sponsors[array_search('..',$this->sponsors)]);
+    $this->sponsors = array_values($this->sponsors);
+    $this->spo_cnt = ceil(count($this->sponsors)/4);
+
     $this->a_list = [ 
         'CHERRY GLAZERR'=>[
-            'l'=>'cherry-glazerr.com',
+            'l'=>'http://www.cherry-glazerr.com',
             'i'=>'b_i/cherry_glazerr.jpg',
             'a'=>'Cherry Glazerr',
         ], 
@@ -15,11 +21,6 @@ class Home extends Controller
             'l'=>'https://www.youtube.com/channel/UCC8FSfSnbjiZ6vGr68ZLtzg',
             'i'=>'b_i/bbno$.jpg',
             'a'=>'bbno$',
-        ], 
-        'YUNG HEAZY'=>[ 
-            'l'=>'https://yungheazy.com/',
-            'i'=>'b_i/yungheazy.jpg',
-            'a'=>'Yung Heazy',
         ], 
         'BORED DECOR'=>[ 
             'l'=>'https://boreddecor.bandcamp.com/',
@@ -30,6 +31,11 @@ class Home extends Controller
             'l'=>'https://club-sofa.bandcamp.com/',
             'i'=>'b_i/clubsofa.jpg',
             'a'=>'Club Sofa',
+        ], 
+        'YUNG HEAZY'=>[ 
+            'l'=>'https://yungheazy.com/',
+            'i'=>'b_i/yungheazy.jpg',
+            'a'=>'Yung Heazy',
         ], 
         'POLO BRIAN'=>[ 
             'l'=>'https://soundcloud.com/nicoxbrian',

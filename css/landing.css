@@ -47,6 +47,9 @@ body {
 .content > .col-xs-12 {
 	padding: 0;
 }
+#poster {
+    background-color: #fcc6e5;
+}
 
 .poster img {
   width: 100%;
@@ -63,7 +66,7 @@ body {
 .sponsors {
 	text-align: left;
 	padding: 20px 10px;
-	background: #E5FFFF;
+	background: #8ccee7;
 }
 .sponsors .container {
 	background: #FFF3A3;
@@ -85,7 +88,7 @@ body {
     margin: auto;
 }
 .artists {
-	background: #FFF3A3;
+	background: #f4c6ef;
 }
 .artist-list {
   margin-top: 5vh;
@@ -129,7 +132,7 @@ body {
 }
 
 .festival {
-  background: #E5FFFF;
+  background: #d6f7f7;
 }
 
 .festival > img {
