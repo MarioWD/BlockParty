@@ -13,7 +13,7 @@
         <li><a href="#myPage">HOME</a></li>
         <li><a href="#artists">ARTISTS</a></li>
         <li><a href="#festival">FESTIVAL</a></li>
-        <li><a href="https://www.myshowpass.com/cdbp/" target="_blank">BUY PASSES</a></li>
+        <li><a href="https://www.showpass.com/van-pop-fest/" target="_blank">BUY PASSES</a></li>
       </ul>
     </div>
   </div>
@@ -26,29 +26,28 @@
     <div class="row">
         <div class="col mob-12 tbt-12 dsk-4"><img src="images/Waldorf.png" alt="Walforf Logo"/></div>
         <div class="col mob-12 tbt-6 dsk-4 festival-info">
-            <p> Saturday July 1, 2017 </p>
+            <p>Friday August 31st - 1489 E Hastings St - Waldorf Hotel Parking Lot</p>
             <p> 
-                Celebrate Canadas 150th birthday in the heart of East Vancouver at the historic Waldorf Hotel. 
-            </p>
-            <p> 
-                An outdoor stage, beer garden, halfpipe and BBQ will host guests in the
-                parking lot from 12PM to 11PM.  The venues Caberet, Tiki and Hideaway rooms will
-                open for entertainment from 8PM to 2AM. 
+                Join us at the VAN POP FEST at the historic Waldorf Hotel’s parking lot in Vancouver, BC. Nine top tier garage, indie and hip hop acts will grace the stage for the event 3-10pm. This event welcomes ALL AGES and features a 19+ licensed area. 
             </p>
         </div>
         <div class="tickets col mob-12 tbt-6 dsk-4">
             <h2>Tickets</h2>
             <div class="row">
-                <div class="col mob-6 tbt-6 dsk-6">
+                <div class="col mob-4 tbt-4 dsk-4">
                     <p>Early Bird</p>
                     <h3>$15</h3>
                 </div>
-                <div class="col mob-6 tbt-6 dsk-6">
-                    <p>Advance</p>
+                <div class="col mob-4 tbt-4 dsk-4">
+                    <p>Tier I</p>
                     <h3>$20</h3>
                 </div>
+                <div class="col mob-4 tbt-4 dsk-4">
+                    <p>Tier II</p>
+                    <h3>$25</h3>
+                </div>
                 <div class="col mob-12 tbt-12 dsk-12">
-                    <a href="https://www.myshowpass.com/cdbp/" target="_blank" class="btn btn-lg"> Buy Here </a>
+                <a href="https://www.showpass.com/van-pop-fest/" target="_blank" class="btn btn-lg">Buy Here</a>
                 </div>
             </div>
         </div>

@@ -5,71 +5,51 @@ class Home extends Controller
   function __construct()
   {
     parent::__construct();
-    $this->a_list = [
-        'WALTER TV'=>[
-            'l'=>'https://www.facebook.com/WalterTV/',
-            'i'=>'images/WalterTv.jpg',
-            'a'=>'Walter Tv',
+    $this->a_list = [ 
+        'CHERRY GLAZERR'=>[
+            'l'=>'cherry-glazerr.com',
+            'i'=>'b_i/cherry_glazerr.jpg',
+            'a'=>'Cherry Glazerr',
+        ], 
+        'BBNO$'=>[
+            'l'=>'https://www.youtube.com/channel/UCC8FSfSnbjiZ6vGr68ZLtzg',
+            'i'=>'b_i/bbno$.jpg',
+            'a'=>'bbno$',
+        ], 
+        'YUNG HEAZY'=>[ 
+            'l'=>'https://yungheazy.com/',
+            'i'=>'b_i/yungheazy.jpg',
+            'a'=>'Yung Heazy',
+        ], 
+        'BORED DECOR'=>[ 
+            'l'=>'https://boreddecor.bandcamp.com/',
+            'i'=>'b_i/bored-decor.jpg',
+            'a'=>'Bored Décor',
+        ], 
+        'CLUB SOFA'=>[ 
+            'l'=>'https://club-sofa.bandcamp.com/',
+            'i'=>'b_i/clubsofa.jpg',
+            'a'=>'Club Sofa',
+        ], 
+        'POLO BRIAN'=>[ 
+            'l'=>'https://soundcloud.com/nicoxbrian',
+            'i'=>'b_i/brianpolo.jpg',
+            'a'=>'Polo Brian',
+        ], 
+        'WAX COWBOY'=>[ 
+            'l'=>'https://waxcowboy.bandcamp.com/',
+            'i'=>'b_i/waxcowboy.jpg',
+            'a'=>'Wax Cowboy',
+        ], 
+        'MIND OFFLINE'=>[ 
+            'l'=>'https://www.facebook.com/mindoffline604/',
+            'i'=>'b_i/mindoffline.jpg',
+            'a'=>'Mind Offline',
         ],
-        'DJ D. DEE'=>[
-            'l'=>'https://soundcloud.com/derekdee',
-            'i'=>'images/DjDD.jpeg',
-            'a'=>'DJ D. Dee',
-        ],
-        'TANK GYAL'=>[
-            'l'=>'https://www.facebook.com/TankGyal/',
-            'i'=>'images/TankGyal.jpg',
-            'a'=>'Tank Gyal',
-        ],
-        'HUMANS'=>[
-            'l'=>'https://www.facebook.com/dashumans/',
-            'i'=>'images/Humans.jpg',
-            'a'=>'Humans',
-        ],
-        'PEACH PIT'=>[
-            'l'=>'https://www.facebook.com/peachpit17/',
-            'i'=>'images/PeachPit.jpg',
-            'a'=>'Peach Pit',
-        ],
-        'BREVNER'=>[
-            'l'=>'https://www.facebook.com/Brevner/',
-            'i'=>'images/Brevner.jpg',
-            'a'=>'Brevner',
-        ],
-        'LITTLE DESTROYER'=>[
-            'l'=>'https://www.facebook.com/littledestroyermusic/',
-            'i'=>'images/LittleDestroyer.png',
-            'a'=>'Little Destoyer',
-        ],
-        'BB'=>[
-            'l'=>'https://www.facebook.com/bbshredderz/',
-            'i'=>'images/BB.jpg',
-            'a'=>'BB',
-        ],
-        'FUNK SCHWEY'=>[
-            'l'=>'https://www.facebook.com/funkschwey/',
-            'i'=>'images/FunkSchwey.jpg',
-            'a'=>'Funk Schwey',
-        ],
-        'TANGLERS'=>[
-            'l'=>'https://www.facebook.com/TANGLERSBAND/',
-            'i'=>'images/TANGLERS.jpg',
-            'a'=>'TANGLERS',
-        ],
-        'CHAPEL SOUND'=>[
-            'l'=>'https://www.facebook.com/ChapelSound/',
-            'i'=>'images/ChapelSound.jpg',
-            'a'=>'Chapel Sound',
-        ],
-        'MAX ULIS'=>[
-            'l'=>'https://www.facebook.com/mulis',
-            'i'=>'images/MaxUlis.jpg',
-            'a'=>'Max Ulis',
-        ],
-        'DJ KOOKUM'=>[
-            'l'=>'https://www.facebook.com/djkookum/',
-            'i'=>'images/DjKookum.jpg',
-            'a'=>'Dj Kookum',
+        'RAIDEN'=>[ 
+            'l'=>'https://www.instagram.com/raidenchills/',
+            'i'=>'b_i/Raiden.png',
+            'a'=>'Raiden',
         ],
     ];
     $this->run();
