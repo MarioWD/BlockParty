@@ -32,12 +32,4 @@ $(function(){
             $('.navbar-brand').fadeOut();
         }
     });
-
-    $('#teaser-banner').on('click', function(e) {
-        this.play();
-    });
-    
-    $('#teaser-banner').on('ended', function(e) {
-        this.load();
-    });
 });

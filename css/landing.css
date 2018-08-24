@@ -1,7 +1,5 @@
 /* START STRAP OVERRIDE */
 .navbar {
-  background-color: transparent;
-  opacity: 1;
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
@@ -48,7 +46,12 @@ body {
 	padding: 0;
 }
 #poster {
-    background-color: #fcc6e5;
+    padding-top: 50px;
+}
+
+#poster,
+#teaser {
+    background-color: #ffc8e7;
 }
 
 .poster img {
@@ -66,10 +69,10 @@ body {
 .sponsors {
 	text-align: left;
 	padding: 20px 10px;
-	background: #8ccee7;
+	background: #ffc8e7;
 }
 .sponsors .container {
-	background: #FFF3A3;
+	background: #ffc8e7;
 }
 .sponsors img {
   width: 100%;
@@ -79,7 +82,7 @@ body {
 }
 
 .sponsors>.row, .artists>.row, .festival>.row{
-	padding: 10vh 0;
+	padding: 20px 0;
 }
 .artists>.row,
 .sponsors>.row,
@@ -88,7 +91,7 @@ body {
     margin: auto;
 }
 .artists {
-	background: #f4c6ef;
+	background: #ffc8e7;
 }
 .artist-list {
   margin-top: 5vh;
@@ -102,12 +105,6 @@ body {
 .artist-list h3 a {
   color: inherit;
   text-shadow: inherit;
-}
-.artist-list h3:last-of-type {
-  font-size: 12px;
-}
-.artists .images {
-  margin-top: -4vh;
 }
 .artists .images > .col-xs-3 {
   padding: 0;
@@ -132,7 +129,7 @@ body {
 }
 
 .festival {
-  background: #d6f7f7;
+  background: #ffc8e7;
 }
 
 .festival > img {
@@ -153,8 +150,8 @@ body {
   width: 100%;
 }
 .tickets .btn {
-  background: #FD5A4B;
-  color: #fff;
+  background: #FFF;
+  color: #000;
   /*color: #E5FFFF;*/
   vertical-align: middle;
   line-height: 15px;
