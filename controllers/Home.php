@@ -16,10 +16,10 @@ class Home extends Controller
             'i'=>'b_i/cherry_glazerr.jpg',
             'a'=>'Cherry Glazerr',
         ], 
-        'BBNO$'=>[
-            'l'=>'https://www.youtube.com/channel/UCC8FSfSnbjiZ6vGr68ZLtzg',
-            'i'=>'b_i/bbno$.jpg',
-            'a'=>'bbno$',
+        'SWEATER BEATS'=>[
+            'l'=>'https://www.sweaterbeats.com/',
+            'i'=>'b_i/sweaterbeats.jpg',
+            'a'=>'Sweater Beats',
         ], 
         'BORED DECOR'=>[ 
             'l'=>'https://boreddecor.bandcamp.com/',
@@ -64,10 +64,10 @@ class Home extends Controller
             'i'=>'b_i/cherry_glazerr.jpg',
             'a'=>'Cherry Glazerr',
         ], 
-        'BBNO$'=>[
-            'l'=>'https://www.youtube.com/channel/UCC8FSfSnbjiZ6vGr68ZLtzg',
-            'i'=>'b_i/bbno$.jpg',
-            'a'=>'bbno$',
+        'SWEATER BEATS'=>[
+            'l'=>'https://www.sweaterbeats.com/',
+            'i'=>'b_i/sweaterbeats.jpg',
+            'a'=>'Sweater Beats',
         ], 
         'YUNG HEAZY'=>[ 
             'l'=>'https://yungheazy.com/',

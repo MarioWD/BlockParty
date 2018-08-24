@@ -7,6 +7,7 @@
 <meta name='generator' content='<?php echo Config::get("siteNameStyled"); ?>' />
 <meta http-equiv='expires' content='Mon, 01 Jan 2000 00:00:00 GMT' />
 <meta name='description' content="<?php echo Config::get("siteDesc"); ?>" />
+<meta property='og:image' content="images/vpftitlebg.gif" />
 <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
 <link rel="bookmark icon" href="images/favicon.ico" />
